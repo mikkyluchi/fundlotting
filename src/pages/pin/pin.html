@@ -1,0 +1,52 @@
+<!--
+  Generated template for the PasswordPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+    <ion-navbar color="primary">
+      <ion-title>SET YOUR PIN</ion-title> 
+    </ion-navbar>
+  
+  </ion-header>
+
+<ion-content>
+  <div style="width: 70%;margin: 0px auto;margin-top: 58px;">
+        <ion-grid >
+                <ion-row>
+                  <ion-col style="border-bottom: 1px solid black; margin:0 10px 0 0">{{passcode.substring(0, 1)}}</ion-col>
+                  <ion-col style="border-bottom: 1px solid black; margin:0 10px 0 0">{{passcode.substring(1, 2)}}</ion-col>
+                  <ion-col style="border-bottom: 1px solid black; margin:0 10px 0 0">{{passcode.substring(2, 3)}}</ion-col>
+                  <ion-col style="border-bottom: 1px solid black; margin:0 10px 0 0">{{passcode.substring(3, 4)}}</ion-col>
+                </ion-row> 
+              </ion-grid>
+   
+</div>
+</ion-content>
+
+<ion-digit-keyboard
+  [align]="keyboardSettings.align"
+  [width]="keyboardSettings.width"
+  [visible]="keyboardSettings.visible"
+  [leftActionOptions]="keyboardSettings.leftActionOptions"
+  [rightActionOptions]="keyboardSettings.rightActionOptions"
+  [roundButtons]="keyboardSettings.roundButtons"
+  [showLetters]="keyboardSettings.showLetters"
+  [swipeToHide]="keyboardSettings.swipeToHide"
+  [theme]="keyboardSettings.theme"
+  (numberClick)="numberClick($event)"
+  
+>
+<ion-toolbar no-border-bottom>
+        <ion-buttons start>
+            <button ion-button (click)="hideKeyboard()">Clear</button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button solid *ngIf="">Next</button>
+            <button ion-button (click)="doSetNewPin()">Done</button>
+            
+        </ion-buttons>
+    </ion-toolbar>
+</ion-digit-keyboard>

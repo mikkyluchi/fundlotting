@@ -1,0 +1,73 @@
+<!--
+  Generated template for the WalletPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>PRODUCTS</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="searching=!searching">
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar *ngIf="searching" [(ngModel)]="searchTerm" (ionInput)="loadProducts()"></ion-searchbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <ion-card *ngFor="let product of products" (click)="openProduct(product)" style="text-align:left !important;padding:15px">
+    <h3>{{product?.product_name}}</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div style="text-align: center">
+            <h4>{{product?.cost_price}}</h4>
+            <small>Cost Price</small>
+          </div>
+        </ion-col>
+         <ion-col>
+          <div style="text-align: center">
+            <h4>{{product?.margin}}</h4>
+            <small>Margin</small>
+          </div>
+        </ion-col>
+        <ion-col>
+            <div style="text-align: center">
+                <h4>{{product?.profitability}}</h4>
+                <small>Profitability Ratio</small>
+              </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- <ion-item>
+      <ion-avatar item-start>
+        <img src="{{images_url}}{{product?.image_url}}">
+      </ion-avatar>
+      <div style="text-align:right">
+        <h2>{{product?.product_name}}</h2>
+        <p><i class="fa fa-money" style="margin-right:10px"></i>{{product?.cost_price}}</p>
+        <p>{{product?.quantity}}</p>
+      </div> 
+    </ion-item> -->
+  </ion-card>
+  <!-- <ion-card *ngFor="let product of products" (click)="openProduct(product)">
+    <img src="{{images_url}}{{product?.image_url}}"/>
+    <div class="card-title">{{product?.product_name}}</div>
+    <div class="card-subtitle">{{product?.quantity}}</div>
+    <div class="card-bottom">
+    	<div class="card-bottom-top"></div>
+    	<div class="card-bottom-bottom"></div>
+    </div>
+  </ion-card> -->
+
+  <!-- <ion-infinite-scroll (infinite)="doInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll> -->
+</ion-content>

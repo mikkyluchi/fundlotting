@@ -1,0 +1,82 @@
+page-onboard {
+
+	h1 {
+	  font-size: 2em;
+	  margin: .67em 0
+	}
+	h2 {
+	  font-family: Campton, Arial, Helvetica, sans-serif;
+	  font-weight: 300;
+	  font-size: 28px;
+	  line-height: 36px;
+	  margin: 0;
+	  padding: 0
+	}
+	h3 {
+	  font-family: Campton, Arial, Helvetica, sans-serif;
+	  font-weight: 300;
+	  font-size: 24px;
+	  line-height: 32px;
+	  margin: 0;
+	  padding: 0
+	}
+	.home-hero {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	.home-hero img {
+		position:absolute;
+		top:50%;
+	}
+	.scroll{height: 100%;}
+ 
+	.home-signature.home-signature1 {
+		z-index: 1
+	}  
+	
+	.home-signature.home-signature2 .content {
+		padding-top: 10px
+	}
+	.home-signature {
+		background: #fff;
+		width: 100%;
+		height: auto;
+		padding: 0 16px;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		position: relative;
+		padding-top:1000%;
+	}
+	 
+	
+	.home-signature .content {
+		width: 100%;
+		padding: 40px 0 0;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		text-align: center
+	}
+	.home-signature h3 {
+		color: #4B5C6A
+	}
+	
+	.home-signature hr {
+		background: #FAB655;
+		width: 40px;
+		height: 2px;
+		border: none;
+		margin: 12px 0 13px;
+		display: inline-block
+	}
+	
+	.home-signature p {
+		color: #697A87
+	}
+	ion-footer {
+		padding: 0px;
+    border-top: 2px solid #6aa0ff;
+    /* margin-top: 112px; */
+    bottom: -100px;
+	}
+}

@@ -1,6 +1,8 @@
 // http://ionicframework.com/docs/theming/
-
-
+@import './components/ion-digit-keyboard/ion-digit-keyboard';
+$SIDEMENU_TOP: #4B5C6A;
+$SIDEMENU_BOTTOM: #4B5C6A;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -13,4 +15,319 @@
 //
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+// automatically applied to the <body> element in the app. 
+
+@font-face {
+  font-family: 'fontawesome';
+  src:url('../assets/css/fonts/fontawesome-webfont.eot');
+  src:url('../assets/css/fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+      url('../assets/css/fonts/fontawesome-webfont.woff') format('woff'),
+      url('../assets/css/fonts/fontawesome-webfont.ttf') format('truetype'),
+      url('../assets/css/fonts/fontawesome-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Campton;
+  font-weight: 300;
+  src: url(../assets/css/fonts/2D3E32_4_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2D3E32_4_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2D3E32_4_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2D3E32_4_0.ttf?version=1507227369057) format('truetype')
+}
+@font-face {
+  font-family: Campton;
+  font-weight: 300;
+  src: url(../assets/css/fonts/2D3E32_4_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2D3E32_4_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2D3E32_4_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2D3E32_4_0.ttf?version=1507227369057) format('truetype')
+}
+
+@font-face {
+  font-family: Campton;
+  font-weight: 400;
+  src: url(../assets/css/fonts/2D3E32_5_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2D3E32_5_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2D3E32_5_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2D3E32_5_0.ttf?version=1507227369057) format('truetype')
+}
+
+@font-face {
+  font-family: Campton;
+  font-weight: 500;
+  src: url(../assets/css/fonts/2D3E32_2_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2D3E32_2_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2D3E32_2_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2D3E32_2_0.ttf?version=1507227369057) format('truetype')
+}
+
+@font-face {
+  font-family: Campton;
+  font-weight: 700;
+  src: url(../assets/css/fonts/2D3E32_3_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2D3E32_3_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2D3E32_3_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2D3E32_3_0.ttf?version=1507227369057) format('truetype')
+}
+
+@font-face {
+  font-family: DINPro;
+  font-weight: 400;
+  src: url(../assets/css/fonts/dinpro-regular-webfont.eot?version=1507227369057);
+  src: url(../assets/css/fonts/dinpro-regular-webfont.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/dinpro-regular-webfont.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/dinpro-regular-webfont.ttf?version=1507227369057) format('truetype'), url(../assets/css/fonts/dinpro-regular-webfont.svg?version=1507227369057#DINProRegular) format('svg')
+}
+
+@font-face {
+  font-family: DINPro;
+  font-weight: 500;
+  src: url(../assets/css/fonts/dinpro-medium-webfont.eot?version=1507227369057);
+  src: url(../assets/css/fonts/dinpro-medium-webfont.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/dinpro-medium-webfont.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/dinpro-medium-webfont.ttf?version=1507227369057) format('truetype'), url(../assets/css/fonts/dinpro-medium-webfont.svg?version=1507227369057#DINProMedium) format('svg')
+}
+
+@font-face {
+  font-family: DINPro;
+  font-weight: 300;
+  src: url(../assets/css/fonts/2C7464_0_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2C7464_0_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2C7464_0_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2C7464_0_0.ttf?version=1507227369057) format('truetype')
+}
+
+@font-face {
+  font-family: DINPro;
+  font-weight: 700;
+  src: url(../assets/css/fonts/dinpro-bold-webfont.eot?version=1507227369057);
+  src: url(../assets/css/fonts/dinpro-bold-webfont.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/dinpro-bold-webfont.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/dinpro-bold-webfont.ttf?version=1507227369057) format('truetype'), url(../assets/css/fonts/dinpro-bold-webfont.svg?version=1507227369057#DINProBold) format('svg')
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 400;
+  src: url(../assets/css/fonts/proximanova-regular-webfont.eot?version=1507227369057);
+  src: url(../assets/css/fonts/proximanova-regular-webfont.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/proximanova-regular-webfont.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/proximanova-regular-webfont.ttf?version=1507227369057) format('truetype'), url(../assets/css/fonts/proximanova-regular-webfont.svg?version=1507227369057#ProximaNovaRegular) format('svg')
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 500;
+  src: url(../assets/css/fonts/proximanova-semibold-webfont.eot?version=1507227369057);
+  src: url(../assets/css/fonts/proximanova-semibold-webfont.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/proximanova-semibold-webfont.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/proximanova-semibold-webfont.ttf?version=1507227369057) format('truetype'), url(../assets/css/fonts/proximanova-semibold-webfont.svg?version=1507227369057#ProximaNovaRegular) format('svg')
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 700;
+  src: url(../assets/css/fonts/proximanova-bold-webfont.eot?version=1507227369057);
+  src: url(../assets/css/fonts/proximanova-bold-webfont.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/proximanova-bold-webfont.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/proximanova-bold-webfont.ttf?version=1507227369057) format('truetype'), url(../assets/css/fonts/proximanova-bold-webfont.svg?version=1507227369057#ProximaNovaBold) format('svg')
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 300;
+  src: url(../assets/css/fonts/proximanova-light-webfont.eot?version=1507227369057);
+  src: url(../assets/css/fonts/proximanova-light-webfont.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/proximanova-light-webfont.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/proximanova-light-webfont.ttf?version=1507227369057) format('truetype'), url(../assets/css/fonts/proximanova-light-webfont.svg?version=1507227369057#ProximaNovaLight) format('svg')
+}
+
+@font-face {
+  font-family: OCRa;
+  src: url(../assets/css/fonts/2B9932_0_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2B9932_0_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2B9932_0_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2B9932_0_0.ttf?version=1507227369057) format('truetype')
+}
+
+@font-face {
+  font-family: OCRb;
+  src: url(../assets/css/fonts/2B992D_0_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2B992D_0_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2B992D_0_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2B992D_0_0.ttf?version=1507227369057) format('truetype')
+}
+
+@font-face {
+  font-family: MICR;
+  src: url(../assets/css/fonts/2BA155_0_0.eot?version=1507227369057);
+  src: url(../assets/css/fonts/2BA155_0_0.eot?&version=1507227369057#iefix) format('embedded-opentype'), url(../assets/css/fonts/2BA155_0_0.woff?version=1507227369057) format('woff'), url(../assets/css/fonts/2BA155_0_0.ttf?version=1507227369057) format('truetype')
+}
+.spacer {
+  height:15px;
+}
+.profile-image{
+  img{
+      border-radius:50%;
+      margin:10px;
+      border: 4px solid $SIDEMENU_TRANSPARENCY;
+      -webkit-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+  }
+}
+// .toolbar-md {
+//   padding: 16px !important; 
+// }
+// .toolbar-background-md {
+//   border-color: #ffffff !important;
+//   background: #ffffff !important;
+// }
+// .header-md::after {
+//   background: none !important
+// }
+// .menu-text {
+//   color: #fff !important;
+// }
+// .menu-text h3{
+//   margin: 0px;
+
+// }
+// .menu-text p{
+//   margin: 10px 0 0 0;
+  
+// }
+// ion-list {
+//   margin-bottom:10px;
+//   background: #4B5C6A;
+  
+// }
+// ion-item {
+//   background: #4B5C6A !important;
+//   color: #fff !important;
+//   // padding-left:  0 !important;
+// }
+// .item-md p {
+//   color:#fff;
+// }
+// .scroll-content {
+//   margin-top: 86px;
+//   padding: 0px !important;
+//   padding-top: 16px;
+// }
+// .toolbar-content {
+//   border-bottom: 1px solid #708290;
+// }
+// .bottom-content {
+//   margin-top :16px;
+//   padding-top: 16px;
+// }
+// .toolbar-background-md {
+//   border-color: #4B5C6A !important;
+//    background: #4B5C6A !important; 
+// }
+// .scroll-content {
+//   margin-top: 111px;
+//   background: #4B5C6A;
+// }
+// .item-inner {
+//   margin-left:6px !important;
+// }
+.menu-inner {
+  background:#4B5C6A !important;
+}
+
+$SIDEMENU_TOP: #4B5C6A;
+$SIDEMENU_BOTTOM: #4B5C6A;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
+.spacer {
+    height:15px;
+}
+.side-menu-item{
+    background:none;
+    color:white;
+    font-weight:300;
+    border:0px;
+    .item-content{
+        background:none;
+        &.activated{
+            background: $SIDEMENU_TRANSPARENCY;
+        }
+    }
+    &.active-page-highlight{
+        .item-content{
+            background: $SIDEMENU_TRANSPARENCY;
+        }
+    }
+    .item-inner {
+      margin-left: 12px;
+    }
+}
+
+.side-menu-gradient{
+    background: -webkit-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+}
+ion-menu{
+  ion-content{
+    background: -webkit-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+  }
+  .md .menu-inner {
+    background: -webkit-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM) !important;
+  }
+ }
+
+.profile-image{
+    img{
+        border-radius:50%;
+        margin:10px;
+        border: 4px solid $SIDEMENU_TRANSPARENCY;
+        -webkit-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+    }
+}
+.top-section {
+  background-image: url('./assets/imgs/bg.png');
+ background-position: center; 
+  margin-bottom: 10px;
+  h2 {
+    font-family: Campton, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0
+  }
+  h3 {
+    font-family: Campton, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0
+  }
+ 
+}
+.bottom-section { 
+  font-family: Campton, Arial, Helvetica, sans-serif;
+   .item-inner {
+    margin-left: 6px !important;
+  } 
+}
+ion-footer {
+  padding: 5px 10px 12px 10px !important;
+  .nav-center {
+      text-align: left;
+  }
+  .nav-center {
+      padding-right: 25px;
+      text-align: right;
+      width: 99%;
+      display: table-cell;
+      vertical-align: middle;
+      white-space: nowrap;
+
+  } 
+  .nav-center a+a {
+      margin-left: 10px;
+  } 
+  .btn-nav {
+      border: 1px solid transparent;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: ProximaNova,Arial,Helvetica,sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      height: 24px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      padding: 0 10px;
+      text-decoration: none;
+      transition: color .15s ease-out;
+      vertical-align: middle;
+      width: auto;
+  }
+}

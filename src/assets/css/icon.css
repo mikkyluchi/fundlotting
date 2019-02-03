@@ -1,0 +1,463 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+
+[hidden],
+template {
+  display: none
+}
+
+a {
+  background: 0 0
+}
+
+a:active,
+a:hover {
+  outline: 0
+}
+
+abbr[title] {
+  border-bottom: 1px dotted
+}
+
+b,
+strong {
+  font-weight: 700
+}
+
+dfn {
+  font-style: italic
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+
+mark {
+  background: #ff0;
+  color: #000
+}
+
+small {
+  font-size: 80%
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sup {
+  top: -.5em
+}
+
+sub {
+  bottom: -.25em
+}
+
+img {
+  border: 0
+}
+
+svg:not(:root) {
+  overflow: hidden
+}
+
+figure {
+  margin: 1em 40px
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0
+}
+
+pre {
+  overflow: auto
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em
+}
+
+legend {
+  border: 0;
+  padding: 0
+}
+
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0
+}
+
+
+i[class^=icon-] {
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.icon-accredited,
+.icon-antifraud,
+.icon-batch,
+.icon-bpafree,
+.icon-card-chip,
+.icon-card-key,
+.icon-card-swipe,
+.icon-check,
+.icon-email,
+.icon-founded,
+.icon-gift,
+.icon-greentech,
+.icon-hipaa,
+.icon-hipaa1,
+.icon-iphone,
+.icon-iwatch,
+.icon-nextday,
+.icon-nopaper,
+.icon-paperless,
+.icon-pci,
+.icon-recharge,
+.icon-searchable,
+.icon-security,
+.icon-terminal,
+.icon-text,
+.icon-transaction,
+.icon-universal {
+  background: url(images/illustration-sprite.png?version=1507227369057);
+  width: 54px;
+  height: 54px
+}
+
+
+.icon-accredited+em,
+.icon-antifraud+em,
+.icon-batch+em,
+.icon-bpafree+em,
+.icon-card-chip+em,
+.icon-card-key+em,
+.icon-card-swipe+em,
+.icon-check+em,
+.icon-email+em,
+.icon-founded+em,
+.icon-gift+em,
+.icon-greentech+em,
+.icon-hipaa+em,
+.icon-hipaa1+em,
+.icon-iphone+em,
+.icon-iwatch+em,
+.icon-nextday+em,
+.icon-nopaper+em,
+.icon-paperless+em,
+.icon-pci+em,
+.icon-recharge+em,
+.icon-searchable+em,
+.icon-security+em,
+.icon-terminal+em,
+.icon-text+em,
+.icon-transaction+em,
+.icon-universal+em {
+  font-style: normal
+}
+
+.icon-card-swipe {
+  background-position: 0 0
+}
+
+.icon-card-chip {
+  background-position: -54px 0
+}
+
+.icon-check {
+  background-position: -108px 0
+}
+
+.icon-iphone {
+  background-position: -162px 0
+}
+
+.icon-iwatch {
+  background-position: -216px 0
+}
+
+.icon-paperless {
+  background-position: -270px 0
+}
+
+.icon-antifraud {
+  background-position: -324px 0
+}
+
+.icon-security {
+  background-position: -378px 0
+}
+
+.icon-nopaper {
+  background-position: -432px 0
+}
+
+.icon-searchable {
+  background-position: -486px 0
+}
+
+.icon-bpafree {
+  background-position: -540px 0
+}
+
+.icon-greentech {
+  background-position: -594px 0
+}
+
+.icon-email {
+  background-position: -648px 0
+}
+
+.icon-text {
+  background-position: -702px 0
+}
+
+.icon-universal {
+  background-position: -756px 0
+}
+
+.icon-terminal {
+  background-position: -810px 0
+}
+
+.icon-card-key {
+  background-position: -864px 0
+}
+
+.icon-recharge {
+  background-position: -918px 0
+}
+
+.icon-transaction {
+  background-position: -972px 0
+}
+
+.icon-batch {
+  background-position: -1026px 0
+}
+
+.icon-gift {
+  background-position: -1080px 0
+}
+
+.icon-nextday {
+  background-position: -1134px 0
+}
+
+.icon-pci {
+  background-position: -1188px 0
+}
+
+.icon-hipaa1 {
+  background-position: -1242px 0
+}
+
+.icon-hipaa {
+  background-position: -1296px 0
+}
+
+.icon-accredited {
+  background-position: -1404px 0
+}
+
+.icon-founded {
+  background-position: -1458px 0
+}
+
+.icon-facebook-24,
+.icon-instagram-24,
+.icon-linkedin-24,
+.icon-twitter-24 {
+  background: url(images/social-sprite-24.png?version=1507227369057);
+  width: 24px;
+  height: 24px
+}
+.icon-facebook-24 {
+  background-position: 0 0
+}
+
+.icon-instagram-24 {
+  background-position: -24px 0
+}
+
+.icon-linkedin-24 {
+  background-position: -48px 0
+}
+
+.icon-twitter-24 {
+  background-position: -72px 0
+}
+
+
+.icon-clean-start,
+.icon-rate-match {
+  background: url(../../pricing/assets/css/images/plans-sprite.png?version=1507227369057);
+  width: 116px;
+  height: 100px
+}
+
+.icon-clean-start {
+  background-position: 0 0
+}
+
+.icon-rate-match {
+  background-position: -116px 0
+}
+
+.icon-company,
+.icon-company-focus,
+.icon-mail,
+.icon-mail-focus,
+.icon-name,
+.icon-name-focus,
+.icon-phone,
+.icon-phone-focus {
+  background: url(../../pricing/assets/css/images/form-sprite.png?version=1507227369057);
+  width: 20px;
+  height: 20px
+}
+
+
+.icon-name {
+  background-position: 0 0
+}
+
+.icon-company {
+  background-position: -20px 0
+}
+
+.icon-mail {
+  background-position: -40px 0
+}
+
+.icon-phone {
+  background-position: -60px 0
+}
+
+.icon-name-focus {
+  background-position: 0 -20px
+}
+
+.icon-company-focus {
+  background-position: -20px -20px
+}
+
+.icon-mail-focus {
+  background-position: -40px -20px
+}
+
+.icon-phone-focus {
+  background-position: -60px -20px
+}
+
+.icon-checkmark {
+  background: url(../../pricing/assets/css/images/checkmark-icon.png?version=1507227369057);
+  width: 48px;
+  height: 48px
+}
+
+
+
+.icon-facebook,
+.icon-instagram,
+.icon-linkedin,
+.icon-twitter {
+  background: url(../../components/navigation-footer/assets/css/images/social-sprite.png?version=1507227369057);
+  width: 16px;
+  height: 16px
+}
+
+
+.icon-facebook {
+  background-position: 0 0
+}
+
+.icon-instagram {
+  background-position: -16px 0
+}
+
+.icon-linkedin {
+  background-position: -32px 0
+}
+
+.icon-twitter {
+  background-position: -48px 0
+}
+
+.icon-call,
+.icon-call-white,
+.icon-close,
+.icon-menu {
+  background: url(images/header-sprite@2x.png?version=1507227369057);
+  height: 18px;
+  width: 18px
+}
+
+
+.icon-menu {
+  background-position: 0 0
+}
+
+.icon-call {
+  background-position: -18px 0
+}
+
+.icon-call-white {
+  background-position: -36px 0
+}
+
+.icon-close {
+  background-position: -54px 0
+}
+
+/*# sourceMappingURL=payments.css.map */

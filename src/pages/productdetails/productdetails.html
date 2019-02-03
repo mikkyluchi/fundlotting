@@ -1,0 +1,54 @@
+<!--
+  Generated template for the ProductdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{product?.product_name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="home-hero" *ngIf="image" [style.background-image]="image">
+    <div class="content">
+      <h2>{{product?.product_name}}</h2>
+      <hr>
+
+    </div>
+  </div>
+  <div class="home-alt">
+    <ion-item>
+      <span>Price</span>
+      <p item-end>{{product?.cost_price}}</p>
+    </ion-item>
+  </div>
+
+  <ion-item>
+    <span>Quantity</span>
+    <p item-end>{{product?.quantity}}</p>
+  </ion-item>
+  <div class="home-alt">
+    <ion-item>
+      <span>Margin</span>
+      <p item-end>{{product?.margin}}</p>
+    </ion-item>
+  </div>
+  <ion-item>
+    <span>Turnover</span>
+    <p item-end>{{product?.turnover}}</p>
+  </ion-item>
+  <div class="home-alt">
+    <ion-item>
+      <span>Profitability</span>
+      <p item-end>{{product?.profitability}}</p>
+    </ion-item>
+  </div>
+</ion-content>
+<ion-footer *ngIf="is_invest">
+  <button ion-button full block (click)="presentPrompt(product)">ORDER NOW</button>
+</ion-footer>

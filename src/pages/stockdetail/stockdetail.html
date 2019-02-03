@@ -1,0 +1,78 @@
+<!--
+  Generated template for the StocksPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>CART</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoproducts()">
+        <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="home-alt">
+    <ion-item>
+      <span>Total({{cartObj?.total_qty}})</span>
+      <p item-end>{{cartObj?.total_amount}}</p>
+    </ion-item>
+  </div>
+  <div style="padding:5px 13px" *ngIf="cartObj?.total_qty>0">
+    <button ion-button full (click)="checkOut()">Checkout</button>
+  </div>
+  <div style="padding:5px">
+    <ion-card *ngFor="let product of cartObj?.cart">
+      <ion-card-header>
+        <p item-start class="pull-left">{{product.product_name}}</p>
+        <p item-end class="pull-right">{{product.quantityInCart}} x &#8358; {{product.cost_price}} =
+          <strong> &#8358; {{ product.quantityInCart * product.cost_price }}</strong>
+        </p>
+      </ion-card-header>
+      <div class="item item-body">
+        <!-- <img src="{{images_url}}{{product?.image_url}}" width="100%" height="auto" style="width: 100%; height: auto;"> -->
+        <form class="list"></form>
+        <div>
+          
+        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+                <button ion-button color="danger" (click)="removeFromCart(product.product_id)">
+                    <ion-icon name="trash"></ion-icon>
+                  </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-only (click)="inc(product)">
+                  <ion-icon ios="ios-add" md="md-add"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear>{{product.quantityInCart}}</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-only (click)="dec(product)">
+                    <ion-icon ios="ios-remove" md="md-remove"></ion-icon>
+                  </button>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid> 
+      </div>
+    </ion-card>
+  </div>
+  <div style="padding:5px 13px" *ngIf="cartObj?.total_qty>0">
+    <button ion-button full (click)="checkOut()">Checkout</button>
+  </div>
+</ion-content>

@@ -1,0 +1,445 @@
+page-address {
+    h2 {
+        font-family: Campton, Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+        padding: 0
+      }
+      h3 {
+        font-family: Campton, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0
+      }
+      
+      hr {
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 0
+      }
+      
+      p {
+          font-family: ProximaNova,Arial,Helvetica,sans-serif;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 22px;
+          margin: 0;
+          padding: 0;
+      }
+        .header {
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          display: inline-table;
+          left: 0;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 100
+        }
+      
+        .header.sticky-top {
+          top: 0
+        }
+        .header.sticky-in {
+          top: 0;
+          transition: top .25s ease-out
+        }
+      
+        .header.sticky-out {
+          top: -75px;
+          transition: top .25s ease-out
+        }
+      
+        .header .header-inner {
+          background-image: linear-gradient(to bottom, #fff 0, rgba(255, 255, 255, 0) 100%);
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          height: 100%;
+          margin: 0 auto;
+          max-width: 1600px;
+          padding: 17px 16px;
+          position: relative;
+          transition: padding .3s ease-in;
+          width: 100%
+        }
+        .sticky-fixed.header .header-inner {
+          background: 0 0;
+          padding-bottom: 7px;
+          padding-top: 17px;
+          transition: padding .25s ease-out
+        }
+      
+        .header #logo,
+        .header .nav-center,
+        .header .nav-right {
+          display: table-cell;
+          vertical-align: middle;
+          white-space: nowrap;
+          width: auto
+        }
+      
+        .header #logo a+a,
+        .header .nav-center a+a,
+        .header .nav-right a+a {
+          margin-left: 10px
+        }
+      
+        .header .nav-center {
+          padding-right: 25px;
+          text-align: right;
+          width: 99%
+        }
+        .header .logo-btn {
+          background: url(../assets/imgs/fundlot@2.png);
+          cursor: pointer;
+          display: inline-block;
+          height: 80px;
+          vertical-align: middle;
+          width: 153px;
+          background-repeat: no-repeat;
+        }
+        .header .btn-nav {
+          border: 1px solid transparent;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          color: #697a87;
+          cursor: pointer;
+          display: inline-block;
+          font-family: Campton, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          height: 24px;
+          letter-spacing: 1px;
+          line-height: 26px;
+          padding: 0 10px;
+          text-decoration: none;
+          transition: color .15s ease-out;
+          vertical-align: middle;
+          width: auto
+        }
+      
+        .header .btn-nav:active,
+        .header .btn-nav:focus,
+        .header .btn-nav:hover {
+          outline: 0;
+          text-decoration: none
+        }
+      
+        .header .btn-nav:active,
+        .header .btn-nav:hover {
+          color: #000
+        }
+      
+        .header .btn-nav.active {
+          color: #32b4d8;
+          cursor: default
+        }
+        .header .btn-sign {
+          border: 1px solid #4db142;
+          border-radius: 17px;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          color: #4db142;
+          cursor: pointer;
+          display: inline-block;
+          font-family: Campton, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          height: 34px;
+          letter-spacing: 1px;
+          line-height: 36px;
+          padding: 0 20px;
+          text-decoration: none;
+          transition: background .15s ease-out, color .15s ease-out;
+          vertical-align: middle;
+          width: auto
+        }
+      
+        .header .btn-sign:active,
+        .header .btn-sign:focus,
+        .header .btn-sign:hover {
+          text-decoration: none
+        }
+      
+        .header .btn-sign:active,
+        .header .btn-sign:hover {
+          background: #4db142;
+          color: #fff
+        }
+      
+        .sticky-fixed.header .btn-sign {
+          background: #4db142;
+          color: #fff
+        }
+      
+        .sticky-fixed.header .btn-sign:hover {
+          background: #47963b
+        }
+      
+        .header .btn-call {
+          border: 1px solid #a7b5c0;
+          border-radius: 17px;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          cursor: pointer;
+          display: inline-block;
+          height: 34px;
+          position: relative;
+          transition: border .15s ease-out;
+          vertical-align: middle;
+          width: 34px
+        }
+      
+        .header .btn-call i {
+          left: 50%;
+          margin-left: -9px;
+          margin-top: -9px;
+          position: absolute;
+          top: 50%;
+          transition: opacity .15s ease-out
+        }
+      
+        .header .btn-call:hover i {
+          opacity: 1
+        }
+      
+        .header .call-tooltip {
+          background: #2d3e4d;
+          border-radius: 5px;
+          box-shadow: 0 9px 14px rgba(0, 0, 0, .15);
+          color: #c5d3dc;
+          font-family: Campton, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          line-height: 16px;
+          margin-top: 10px;
+          opacity: 0;
+          padding: 16px 20px 12px;
+          position: absolute;
+          right: 0;
+          text-align: center;
+          top: 100%;
+          transition: opacity .15s ease-out, visibility 0s .15s ease-out;
+          visibility: hidden
+        }
+      
+        .header .call-tooltip b {
+          color: #fff;
+          font-family: Campton, Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          letter-spacing: 1px;
+          line-height: 22px
+        }
+      
+        .header .call-tooltip:before {
+          bottom: 100%;
+          content: '';
+          height: 10px;
+          left: 0;
+          position: absolute;
+          width: 100%
+        }
+      
+        .header .call-tooltip:after {
+          border-bottom: 7px solid #2d3e4d;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          bottom: 100%;
+          content: '';
+          position: absolute;
+          right: 11px
+        }
+      
+        .header .btn-call:hover .call-tooltip,
+        .header .call-tooltip:hover {
+          opacity: .9;
+          transition: opacity .15s ease-out, visibility 0s 0s ease-out;
+          visibility: visible
+        }
+      
+        .header .btn-menu {
+          border: 1px solid #a7b5c0;
+          border-radius: 17px;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          cursor: pointer;
+          display: inline-block;
+          height: 34px;
+          position: relative;
+          vertical-align: middle;
+          width: 34px
+        }
+      
+        .header .btn-menu i {
+          left: 50%;
+          margin-left: -9px;
+          margin-top: -9px;
+          position: absolute;
+          top: 50%
+        }
+        .header .header-mobile {
+          background: rgba(45, 62, 77, .96);
+          height: 100%;
+          opacity: 0;
+          position: fixed;
+          right: 0;
+          top: 0;
+          transition: opacity .15s ease-out, visibility 0s .15s ease-out;
+          visibility: hidden;
+          width: 100%
+        }
+      
+        .header .header-mobile.opened {
+          opacity: 1;
+          transition: opacity .15s ease-out, visibility 0s 0s ease-out;
+          visibility: visible
+        }
+      
+        .header .header-mobile .head {
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 18px 16px 40px;
+          width: 100%
+        }
+      
+        .header .header-mobile .head:after,
+        .header .header-mobile .head:before {
+          content: '';
+          display: table
+        }
+      
+        .header .header-mobile .head:after {
+          clear: both
+        }
+      
+        .header .header-mobile .head .btn-call-white,
+        .header .header-mobile .head .btn-close {
+          border: 1px solid #8797a3;
+          border-radius: 38px;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          cursor: pointer;
+          display: inline-block;
+          float: right;
+          height: 34px;
+          position: relative;
+          width: 34px
+        }
+      
+        .header .header-mobile .head .btn-call-white i,
+        .header .header-mobile .head .btn-close i {
+          left: 50%;
+          margin-left: -9px;
+          margin-top: -9px;
+          position: absolute;
+          top: 50%
+        }
+      
+        .header .header-mobile .head .btn-close {
+          margin-left: 14px
+        }
+      
+        .header .header-mobile .head .btn-close i {
+          margin-left: -9px;
+          margin-top: -9px
+        }
+      
+        .header .header-mobile .head .btn-signup {
+          border: 1px solid #697a87;
+          border-radius: 17px;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          color: #c5d3dc;
+          cursor: pointer;
+          display: inline-block;
+          float: left;
+          font-family: ProximaNova, Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          height: 34px;
+          letter-spacing: 1px;
+          line-height: 34px;
+          text-align: center;
+          text-decoration: none;
+          width: 140px
+        }
+      
+        .header .header-mobile .head .btn-signup:active,
+        .header .header-mobile .head .btn-signup:focus,
+        .header .header-mobile .head .btn-signup:hover {
+          text-decoration: none
+        }
+      
+        .header .header-mobile nav {
+          white-space: normal
+        }
+      
+        .header .header-mobile nav a {
+          color: #c5d3dc;
+          cursor: pointer;
+          display: inline-block;
+          font-family: ProximaNova, Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          text-decoration: none;
+          width: 100%
+        }
+      
+        .header .header-mobile nav a:active,
+        .header .header-mobile nav a:focus,
+        .header .header-mobile nav a:hover {
+          text-decoration: none
+        }
+      
+        .header .header-mobile nav a.active {
+          background: rgba(75, 92, 106, .56);
+          color: #3eccf3;
+          cursor: default
+        }
+      
+        .header .header-mobile nav a+a {
+          margin-top: 5px
+        }
+        .home-hero {
+         
+          background-size: 100%;
+          width: 100%
+        }
+        .home-hero .content {
+          width: 100%;
+          padding: 35% 0px 30px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          /* text-align: center; */
+        }
+        .home-hero .content h2 {
+        color: #4B5C6A
+      }
+      
+      .home-hero .content hr {
+        background: #FAB655;
+        width: 40px;
+        height: 2px;
+        border: none;
+        margin: 12px 0 13px;
+        display: inline-block
+      }
+      .home-hero .content p {
+        color: #697A87
+      }
+      .home-hero .content p {
+          color: #697A87;
+      } 
+      .auth-buttons {
+        float:right
+      }
+}

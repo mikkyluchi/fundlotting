@@ -1,0 +1,109 @@
+<ion-content padding>
+  <div>
+    <header class="header">
+      <div class="header-inner">
+        <div id="logo">
+          <a class="logo-btn"></a>
+        </div>
+
+        <nav class="nav-center">
+
+        </nav>
+
+        <nav class="nav-right">
+
+
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="home-hero">
+    <div class="content">
+      <h2>What's your address?</h2>
+      <hr>
+
+    </div>
+  </div>
+   
+  <form #signupForm="ngForm" novalidate>
+    <ion-list>
+<ion-item  style="border-top:0px !important;    border-bottom: 1px solid #dedede;padding-left:0px">
+  <ion-label floating color="primary">Address</ion-label>
+    <ion-input clearInput [(ngModel)]="signup.address" name="address" type="text" #address="ngModel" spellcheck="false" autocapitalize="off"
+        required>
+    </ion-input>
+</ion-item>
+<p ion-text [hidden]="address.valid || submitted == false" color="danger" padding-left>
+    Address is required
+</p>
+ 
+<ion-item  style="border-top:0px !important;    border-bottom: 1px solid #dedede;padding-left:0px">
+  <ion-label floating color="primary">City</ion-label>
+    <ion-input [(ngModel)]="signup.city" name="city" type="text" #city="ngModel">
+    </ion-input>
+</ion-item>
+ 
+<ion-item  style="border-top:0px !important;    border-bottom: 1px solid #dedede;padding-left:0px">
+  <ion-label floating color="primary">State</ion-label>
+  <ion-select [(ngModel)]="signup.state" name="state" #state="ngModel">
+    <ion-option value="1">Abia</ion-option>
+    <ion-option value="2">Adamawa</ion-option>
+    <ion-option value="3">Akwa Ibom</ion-option>
+    <ion-option value="4">Anambra</ion-option>
+    <ion-option value="5">Bauchi</ion-option>
+    <ion-option value="6">Bayelsa</ion-option>
+    <ion-option value="7">Benue</ion-option>
+    <ion-option value="8">Borno</ion-option>
+    <ion-option value="9">Cross River</ion-option>
+    <ion-option value="10">Delta</ion-option>
+    <ion-option value="11">Ebonyi</ion-option>
+    <ion-option value="12">Edo</ion-option>
+    <ion-option value="13">Ekiti</ion-option>
+    <ion-option value="14">Enugu</ion-option>
+    <ion-option value="15">FCT</ion-option>
+    <ion-option value="16">Gombe</ion-option>
+    <ion-option value="17">Imo</ion-option>
+    <ion-option value="18">Jigawa</ion-option>
+    <ion-option value="19">Kaduna</ion-option>
+    <ion-option value="20">Kano</ion-option>
+    <ion-option value="21">Katsina</ion-option>
+    <ion-option value="22">Kebbi</ion-option>
+    <ion-option value="23">Kogi</ion-option>
+    <ion-option value="24">Kwara</ion-option>
+    <ion-option value="25">Lagos</ion-option>
+    <ion-option value="26">Nasarrawa</ion-option>
+    <ion-option value="27">Niger</ion-option>
+    <ion-option value="28">Ogun</ion-option>
+    <ion-option value="29">Ondo</ion-option>
+    <ion-option value="30">Osun</ion-option>
+    <ion-option value="31">Oyo</ion-option> 
+    <ion-option value="32">Plateau</ion-option>
+    <ion-option value="33">Rivers</ion-option>
+    <ion-option value="34">Sokoto</ion-option>
+    <ion-option value="35">Taraba</ion-option>
+    <ion-option value="36">Yobe</ion-option>
+    <ion-option value="37">Zamfara</ion-option> 
+  </ion-select>
+</ion-item>
+ 
+</ion-list> 
+</form>
+
+</ion-content>
+<ion-footer>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+
+      </ion-col>
+      <ion-col>
+        <section class="auth-buttons">
+          <button ion-button class="auth-buttons" (click)="onSignup(signupForm)">Save</button>
+        </section>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

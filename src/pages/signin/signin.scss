@@ -1,0 +1,46 @@
+page-signin {
+    .authoption-buttons {
+        padding-top: 0 !important;
+        text-align: center;
+        padding: 40px;
+        margin-top: -35px;
+
+        .button-md {
+            margin: 15px 0px !important;
+            padding: 2.2rem 2.6rem !important;
+        }
+    }
+    .authoption-logo {
+        padding-top: 9%;
+        padding-bottom: 35px;
+        text-align: center;
+        background-image: -moz-linear-gradient(left, #2facfe, #2acfff);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.00, #2facfe), color-stop(1.0, #2acfff));
+        background-color: #DDDDDD;
+        img {
+            max-width: 30%;
+            width: auto\9;
+            height: auto;
+            vertical-align: middle;
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+        }
+        h3 {
+            font-family: Campton,Arial,Helvetica,sans-serif;
+            margin: 15px 0px;
+            font-size: 33px;
+            font-weight: 300;
+            color:#ffffff;
+        }
+        
+    }
+    .authoption-form {
+        ion-card {
+            border-radius : 5px !important;
+            margin-top: -50px;
+        }
+        ion-card-content {
+            padding-bottom:50px !important; 
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Payment Information</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon ios="ios-close-circle-outline" md="md-close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-card class="feedback" *ngIf="source=='deposit'">
+
+    <ion-card-header>
+
+      <div class="header-img">
+        <img src="./assets/imgs/noun_1439633_cc.png" />
+      </div>
+      <h2>Credit Wallet</h2>
+      <h2>{{credit}}</h2>
+      <h2>Code - {{bankcode}}</h2>
+    </ion-card-header>
+
+    <ion-card-content text-center>
+      <p>Instructions</p>
+      <p>Please deposit the amount in our bank with details below</p>
+      <p>Also include the above code in the description</p>
+    </ion-card-content>
+
+    <ion-card-content style="background: #ccc;
+    margin-top: 10px !important;
+    padding: 10px !important;">
+      <h1>2019833684</h1>
+      <h1>Ezegha Bonaventure Izunna</h1>
+      <h1>First Bank</h1>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card class="feedback" *ngIf="source=='online'">
+
+    <ion-card-header>
+
+      <div class="header-img">
+        <img src="./assets/imgs/noun_1439633_cc.png" />
+      </div>
+      <h2>Credit Wallet</h2>
+      <h2>{{credit}}</h2>
+      <h2>Charges - {{ ((1.5/100)*credit.valueAsNumber)+100 }}</h2>
+      <h2>Value - {{ credit.valueAsNumber - ((1.5/100)*credit.valueAsNumber)+100 }}</h2>
+    </ion-card-header>
+ 
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <button *ngIf="source=='deposit'" ion-button full (tap)="doCredit()">Submit</button>
+  <!-- <angular4-paystack [key]="paystack_key" [email]="user?.email" [amount]="credit*100" [ref]="random_string" [class]="'bar-button bar-button-md bar-button-default bar-button-default-md'" (close)="paymentCancel()" (callback)="paymentDone($event)">Make Payment</angular4-paystack> -->
+</ion-footer>

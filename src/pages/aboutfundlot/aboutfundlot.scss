@@ -1,0 +1,290 @@
+
+.ios, .md {
+    page-aboutfundlot {
+        ion-card {
+            box-shadow: none !important;
+        }
+        ion-card-content {
+            padding: 10px 13px !important;
+            padding-bottom:0px !important;
+        }
+        ion-card-header {
+            padding-bottom:0px !important;
+            text-align:center !important;
+            .header-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            img {
+                
+                border-radius: 50%;
+                width: 75px;
+                height: auto;
+                margin-right: 15px;
+                display: block;
+            }
+            h2 {
+                font-family: Campton, Arial, Helvetica, sans-serif;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 32px;
+                margin: 5px;
+                padding: 0
+            }
+        }
+        .flex-container {
+            font-family: Campton, Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            
+            -webkit-flex-flow: row wrap;
+            justify-content: space-around;
+            p {
+                font-family: Campton, Arial, Helvetica, sans-serif;
+                font-size:14px !important;
+                text-align: center !important
+            }
+          }
+          
+          .flex-item {
+            font-family: Campton, Arial, Helvetica, sans-serif;
+            //background: tomato;
+            padding: 5px;
+            width: auto;
+            height: auto;
+            //margin-top: 10px;
+            
+            //line-height: 150px;
+            color: #000;
+            font-weight: bold;
+            //font-size: 3em;
+            text-align: center;
+            ion-icon {
+                
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-bottom: 5px !important;
+            }
+          }
+        expandable-header{
+            text-align:center;
+            color:#fff;
+            h2 {
+                font-size:37px !important;
+                margin-bottom: 0px;
+            }
+        }
+    shrinking-segment-header {
+        
+               background-color: #363636;
+               color: #fff;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+        
+               img {
+                   border-radius: 50%;
+                   width: 75px;
+                   height: auto;
+                   margin-right: 15px;
+               }
+        
+           }
+           ion-item {
+            width: 92%;
+            margin: 4%;
+            padding-left: 10px !important;
+            margin-bottom: 10px;
+            background-color: #fff;
+            opacity: 0.7;
+            font-size: 0.9em;
+            transition: 0.2s linear;
+        }
+        h2 {
+            font-family: Campton, Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 36px;
+            margin: 10px 0px;
+            padding: 0
+          }
+          h3 {
+            font-family: Campton, Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 32px;
+            margin: 0;
+            padding: 0
+          }
+          
+          hr {
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            height: 0
+          }
+          
+          p {
+              font-family: ProximaNova,Arial,Helvetica,sans-serif;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 22px;
+              margin: 0;
+              padding: 0;
+          }
+          .home-hero {
+            //background: #fff url(https://www.payjunction.com/trinity/2.0.968.e6782e32/app/payments/tour/assets/css/images/home-hero-bg-mobile.jpg?version=1507227369057) no-repeat center 40px;
+            //background-size: 100%;
+            width: 100%;
+            background:#4B5C6A;
+            color:#fff;
+            .green-color {
+                color: rgb(141, 181, 141) !important;
+            }
+            .red-color {
+              color:  rgb(243, 126, 126) !important;
+            }
+          }
+          .home-hero .content {
+            width: 100%;
+            padding: 16px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-align: left
+          }
+          .home-hero .content h2 {
+          color: #fff
+        }
+        
+        .home-hero .content hr {
+          background: #FAB655;
+          width: 40px;
+          height: 2px;
+          border: none;
+          margin: 25px 0 13px;
+          display: inline-block
+        }
+        .home-hero .content p {
+          color: #fff
+        }
+        .home-hero .content p {
+            color: #fff;
+        } 
+        .media:first-child {
+        margin-top: 0;
+    } 
+    .media, .media-body {
+        overflow: hidden;
+        zoom: 1;
+    }
+     
+    .media {
+         // margin-top: 15px; 
+         border-bottom: 1px solid #eee;
+    }
+    .media-left, .media>.pull-left {
+        padding-right: 10px;
+    } 
+    .pull-left {
+        float: left;
+    } 
+    .pull-left {
+        float: left!important;
+    }
+    .p-thumb {
+        padding: 10px !important;
+        border-right:1px solid #ccc;
+    }
+    .p-thumb img {
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+     
+    img {
+        vertical-align: middle;
+    } 
+    img {
+        border: 0;
+    }
+    .media-body, .media-left, .media-right {
+        display: table-cell;
+        vertical-align: top;
+    } 
+    .media-body {
+        width: 10000px;
+    
+        padding: 10px 10px 10px 10px !important;
+    
+    } 
+    .media, .media-body {
+        overflow: hidden;
+        zoom: 1;
+    }
+    .p-head {
+        color: #f77b6f;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .media-body p {
+        /* color: #b8bac6; */
+    }
+    ion-item {
+        padding-left: 0 !important;
+        border-bottom: 1px solid #dedede !important;
+        
+        .item-inner {
+            margin-left: 5px !important;
+        }
+    }
+    ion-icon {
+        margin-left: 10px !important; 
+        padding-top: 4px !important;
+        font-size: 2.8rem;
+    }
+    .pending {
+        margin: 12px;
+        border-radius: 2px;
+        width: calc(100% - 24px);
+        font-size: 1.4rem;
+        background: #fff;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.3);
+        box-shadow: 0 1px 2px rgba(0,0,0,.3);
+        padding:15px;
+        overflow:auto;
+        a {
+            float: right !important;
+            color:green;
+            font-size:1.5rem
+        }
+    }
+    .credit {
+        border-top:5px solid green !important;
+    }
+    .debit {
+        border-top:5px solid red !important;
+    }
+    .green-color {
+        color:green !important;
+    }
+    .red-color {
+       color:red !important;
+    }
+    .credit-text {
+        background: rgba(77, 177, 66, 0.35);
+        color: rgb(142, 216, 134);
+    }
+    .debit-text {
+        background: rgba(189, 50, 50, 0.35);
+        color: rgba(216, 134, 134, 0.95);
+    }
+}
+}

@@ -1,0 +1,77 @@
+{
+	"users":[
+		{
+			"firstname":"Okunuga",
+			"userid":"1",
+			"middlename":"Soji",
+			"surname":"Oriyomi",
+			"username":"codebaba",
+			"address":"189, Babs Animashaun Street, Surulere, Lagos",
+			"account_name":"Soji Oriyomi Okunuga",
+			"phone":"08179264890",
+			"account_number":"0046329069",
+			"email":"okunuga.oriyomi@gmail.com",
+			"mystocks":[
+				{
+					"productid":"",
+					"costprice":"",
+					"purchasedate":"",
+					"margin":"",
+					"quantity":""
+				},
+				{
+					"productid":"",
+					"costprice":"",
+					"purchasedate":"",
+					"margin":"",
+					"quantity":""
+				}
+			],
+			"wallet":{
+				"balance":"",
+				"transactions":[
+					{
+						"transactionid":"1",
+						"transactiontype":"1",
+						"transaction_amount":"",
+						"transaction_date":"",
+						"transaction_description":""
+					},
+					{
+						"transactionid":"1",
+						"transactiontype":"1",
+						"transaction_amount":"",
+						"transaction_date":"",
+						"transaction_description":""
+					}
+				]
+			}
+		}
+	],
+	"products":[
+		{
+			"productname":"Okunuga",
+			"product":"1",
+			"productimage":"Soji",
+			"costprice":"Oriyomi",
+			"margin":"codebaba",
+			"turnover":"189, Babs Animashaun Street, Surulere, Lagos",
+			"profitability":"Soji Oriyomi Okunuga",
+			"quantity":"08179264890",
+			"stockratio":"0046329069", 
+			"isstock":""
+		},
+		{
+			"productname":"Okunuga",
+			"product":"1",
+			"productimage":"Soji",
+			"costprice":"Oriyomi",
+			"margin":"codebaba",
+			"turnover":"189, Babs Animashaun Street, Surulere, Lagos",
+			"profitability":"Soji Oriyomi Okunuga",
+			"quantity":"08179264890",
+			"stockratio":"0046329069", 
+			"isstock":""
+		}
+	]
+}

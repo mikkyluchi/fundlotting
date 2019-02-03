@@ -1,0 +1,75 @@
+page-editprofile {
+    h2 {
+        font-family: Campton, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+        padding: 0
+      }
+      h3 {
+        font-family: Campton, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0
+      }
+      
+      hr {
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 0
+      }
+      
+      p {
+          font-family: ProximaNova,Arial,Helvetica,sans-serif;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 22px;
+          margin: 0;
+          padding: 0;
+      }
+      .home-hero {
+        //background: #fff url(https://www.payjunction.com/trinity/2.0.968.e6782e32/app/payments/tour/assets/css/images/home-hero-bg-mobile.jpg?version=1507227369057) no-repeat center 40px;
+        //background-size: 100%;
+        width: 100%;
+        background:#3f4448;
+        color:#fff;
+      }
+      .home-hero .content {
+        width: 100%;
+        padding: 16px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center
+      }
+      .home-hero .content h2 {
+      color: #fff
+    }
+    
+    .home-hero .content hr {
+      background: #FAB655;
+      width: 40px;
+      height: 2px;
+      border: none;
+      margin: 12px 0 13px;
+      display: inline-block
+    }
+    .home-hero .content p {
+      color: #fff
+    }
+    .home-hero .content p {
+        color: #697A87;
+    } 
+    .bottom {
+        width: 100%; 
+        // background: #4b5c6a;
+    }
+    ion-item {
+      padding-left:0px !important;
+    }
+    ion-col {
+      padding:0 !important
+    }
+}

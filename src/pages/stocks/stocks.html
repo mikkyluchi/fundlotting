@@ -1,0 +1,95 @@
+<!--
+  Generated template for the StocksPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ORDER</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openFilter()">
+        <ion-icon ios="ios-funnel" md="md-funnel"></ion-icon>
+      </button>
+
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="searching=!searching;filtering=false">
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+      </button>
+
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openShoppingCart()">
+
+        <ion-icon name="cart"></ion-icon>
+        <ion-badge>{{cartObj?.total_qty}}</ion-badge>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar *ngIf="searching" [(ngModel)]="searchTerm" (ionInput)="loadStocks()"></ion-searchbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <div padding *ngIf="products?.count=='0'">
+    <p>No available products</p>
+
+  </div>
+  <div *ngIf="products?.count!='0'">
+    <ion-card padding *ngFor="let product of products?.data;let i=index;">
+      <h3 text-left>{{product?.product_name}}</h3>
+      <p>Expires : {{product?.expiry_date}}</p>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div style="text-align: center">
+              <h4>{{product?.cost_price}}</h4>
+              <small>Cost Price</small>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div style="text-align: center">
+              <h4>{{product?.margin}}</h4>
+              <small>Margin</small>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div style="text-align: center">
+              <h4>{{product?.quantity_for_investments}}</h4>
+              <small>Quantity</small>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div style="text-align:right">
+        <p style="position: absolute !important;
+    right: -13px !important;
+    top: 2px !important;">
+          <button ion-button icon-left (click)="presentPrompt(product,i)">
+            <ion-icon name="cart"></ion-icon>
+            ORDER NOW
+          </button>
+
+        </p>
+      </div>
+    </ion-card>
+  </div>
+  <!-- <ion-card *ngFor="let product of products" (click)="openProduct(product)">
+      <img src="{{images_url}}{{product?.image_url}}"/>
+      <div class="card-title">{{product?.product_name}}</div>
+      <div class="card-subtitle">{{product?.quantity}}</div>
+      <div class="card-bottom">
+        <div class="card-bottom-top"></div>
+        <div class="card-bottom-bottom"></div>
+      </div>
+    </ion-card> -->
+
+  <!-- <ion-infinite-scroll (infinite)="doInfinite($event)">
+     <ion-infinite-scroll-content></ion-infinite-scroll-content>
+   </ion-infinite-scroll> -->
+</ion-content>

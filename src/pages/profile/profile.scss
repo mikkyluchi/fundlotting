@@ -1,0 +1,111 @@
+$SIDEMENU_TOP: #ff4b1f;
+$SIDEMENU_BOTTOM: #ff9068;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
+page-profile {
+.spacer {
+    height:15px;
+}
+.profile-image{
+    img{
+        border-radius:50%;
+        margin:10px;
+        border: 4px solid $SIDEMENU_TRANSPARENCY;
+        -webkit-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
+    }
+}
+.top-section {
+  background-color: #000;
+  margin-bottom: 10px;
+  h2 {
+    font-family: Campton, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0
+  }
+  h3 {
+    font-family: Campton, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0
+  }
+ 
+}
+	.activity {
+		text-align: center;
+	    margin: 7.5px 0px;
+	    background: rgba(0, 0, 0, 0.19);
+	    color: #fff;
+	    ion-col {
+	    	padding: 6px 12px  !important;
+	    }
+	    ion-icon {
+	    	margin: 5px 0px !important;
+    		font-size: 2.5em !important;
+	    }
+	}
+	.home-hero {
+    // background: #fff url(https://www.payjunction.com/trinity/2.0.968.e6782e32/app/payments/tour/assets/css/images/home-hero-bg-mobile.jpg?version=1507227369057) no-repeat center 40px;
+    // background-size: 100%;
+    width: 100%;
+    padding:0px !important;
+  }
+  .home-hero .content {
+    width: 100%;
+    // padding: 98% 16px 30px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center
+  }
+  .home-hero .content h2 {
+  	    margin-top: 1.7rem;
+  color: #fff
+}
+
+.home-hero .content hr {
+  background: #FAB655;
+  width: 40px;
+  height: 2px;
+  border: none;
+  margin: 0px 0 13px;
+  display: inline-block
+}
+.home-hero .content p {
+  color: #697A87
+}
+.home-hero .content p {
+    color: #697A87;
+} 
+.personal-item {
+	padding:7.5px;
+}
+ion-card {
+	background: rgba(0, 0, 0, 0.1) !important;
+	color:#fff !important;
+}
+ion-card p{
+	 
+	color:#fff !important;
+	    font-family: Campton, Arial, Helvetica, sans-serif;
+}
+ion-card ion-card-title{
+	padding:0px !important;
+	color:#fff !important;
+	    font-family: Campton, Arial, Helvetica, sans-serif;
+}
+ion-col p{
+	 
+	color:#fff !important;
+	    font-family: Campton, Arial, Helvetica, sans-serif;
+}
+.change-picture-button {
+  padding: 0px 1.4rem !important;
+    margin-top: -60px !important;
+    margin-left: 60px !important;
+}
+}

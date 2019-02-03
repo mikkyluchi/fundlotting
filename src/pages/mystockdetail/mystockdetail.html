@@ -1,0 +1,39 @@
+<!--
+  Generated template for the MystockdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{mystock?.product.product_name}}</ion-title>
+     
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="home-hero">
+    <div class="content">
+       
+      <hr>
+      <div class="wallet_balance" style="position:relative;overflow: hidden;">
+        <h2 style="float: left;margin-right:10px">{{mystock?.total_stock_lower_value}}</h2>
+        <p class='debit-text' style=" border-radius: 20px; margin-top: 13px; padding: 3px 20px; float: left;  ">{{mystock?.total}}</p>
+      </div>
+
+    </div>
+  </div>
+<ion-list> 
+    <ion-item-divider color="light">BATCHES</ion-item-divider>
+  <ion-item  *ngFor="let item of mystock?.my_stock">
+      <ion-icon ios="ios-cart" md="md-cart" item-start></ion-icon>
+      {{item.quantity}}
+      <p>{{item?.date_added| date:'fullDate'}}</p>
+      <p item-end>
+        <!-- <i class="fa fa-plus"  aria-hidden="true"></i>--> {{item.stock_lower_value}}</p> 
+    </ion-item>
+</ion-list>
+</ion-content>

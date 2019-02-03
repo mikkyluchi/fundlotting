@@ -1,0 +1,57 @@
+<ion-content padding>
+  <div>
+    <header class="header">
+      <div class="header-inner">
+        <div id="logo">
+          <a class="logo-btn"></a>
+        </div>
+
+        <nav class="nav-center">
+
+        </nav>
+
+        <nav class="nav-right">
+
+
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="home-hero">
+    <div class="content">
+      <h2>What's your number?</h2>
+      <hr>
+      <p>This will enable us contact you when its needed</p>
+      <p>Don't worry it will never be shared publicly</p>
+    </div>
+  </div>
+  <form #phoneForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item  style="border-top:0px !important;    border-bottom: 1px solid #dedede;padding-left:0px">
+
+        <ion-input clearInput [(ngModel)]="phone.phonenumber" name="phonenumber" type="phone" #phonenumber="ngModel" spellcheck="false"
+          autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
+
+    </ion-list>
+
+  </form>
+</ion-content>
+<ion-footer>
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+           
+  
+        </ion-col>
+        <ion-col>
+          <section class="auth-buttons">
+            <button ion-button class="auth-buttons" (click)="onSavePhoneNumber()">Save</button>
+          </section>
+  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>

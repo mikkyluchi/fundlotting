@@ -1,0 +1,33 @@
+<ion-content>
+	<div class="home-hero" [@onLoadCollapse]="stateExpression">
+		<img [@imgState]="stateExpression" src="assets/imgs/fundlot.png" class="slide-image" />
+
+	</div>
+	<div [@homeSignatureState]="stateExpression" class="home-signature home-signature1">
+		<div class="content">
+			<h3>Welcome to FundLot</h3>
+			<hr>
+			<p>We will like to ask you some question.It will only take two minutes.</p>
+
+		</div>
+	</div>
+</ion-content>
+<ion-footer [@footerState]="stateExpression">
+
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<section class="auth-buttons">
+					<button ion-button full clear class="auth-buttons" (click)="skipOnboarding()">SKIP</button>
+				</section>
+
+			</ion-col>
+			<ion-col>
+				<section class="auth-buttons">
+					<button ion-button full clear class="auth-buttons" (click)="askForPhoneNumber()">CONTINUE</button>
+				</section>
+
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-footer>

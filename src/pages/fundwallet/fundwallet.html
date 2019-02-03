@@ -1,0 +1,76 @@
+<!--
+  Generated template for the EditprofilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+    <ion-navbar color="primary">
+      <ion-title>{{trans_detail}}</ion-title>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="dismiss()">
+            <ion-icon ios="ios-close-circle-outline" md="md-close-circle"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+
+<ion-content>
+  <div class="home-hero" *ngIf="!finalizingPayment">
+    <div class="content">
+      <h3>{{para}}</h3>
+      <div style="margin: 15px 0px">
+        <h1>{{how_much_much}}</h1>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="trans_type=='2' && how_much_much !='0'">
+    <ion-grid >
+      <ion-row>
+        <ion-col>Charges</ion-col>
+        <ion-col>{{((1.5/100)*asNumber(how_much_much))}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Value</ion-col>
+        <ion-col>{{asNumber(how_much_much) - (((1.5/100)*asNumber(how_much_much)))}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-digit-keyboard
+  [align]="keyboardSettings.align"
+  [width]="keyboardSettings.width"
+  [visible]="keyboardSettings.visible"
+  [leftActionOptions]="keyboardSettings.leftActionOptions"
+  [rightActionOptions]="keyboardSettings.rightActionOptions"
+  [roundButtons]="keyboardSettings.roundButtons"
+  [showLetters]="keyboardSettings.showLetters"
+  [swipeToHide]="keyboardSettings.swipeToHide"
+  [theme]="keyboardSettings.theme"
+  (numberClick)="numberClick($event)"
+  
+>
+<ion-toolbar no-border-bottom>
+        <ion-buttons start>
+            <button ion-button (click)="hideKeyboard()">Clear</button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button solid *ngIf="">Next</button>
+            <button ion-button [disabled]="how_much_much==0" (click)="presentPrompt()" *ngIf="trans_type=='1'">Done</button>
+            <!-- <button ion-button [disabled]="how_much_much==0" (click)="finalizeCredit()" *ngIf="trans_type=='2'">Done</button> -->
+            <!-- <button ion-button [disabled]="how_much_much==0" (click)="finishingCredit()" *ngIf="trans_type=='2'">Done</button> -->
+            <angular4-paystack  *ngIf="trans_type=='2'"
+            [key]="paystack_key"
+            [email]="user?.email"
+            [amount]="how_much_much*100"
+            [ref]="random_string"
+            [class]="'bar-button bar-button-md bar-button-default bar-button-default-md'"
+            (close)="paymentCancel()"
+            (callback)="paymentDone($event)"
+          >Done</angular4-paystack>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-digit-keyboard>

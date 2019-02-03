@@ -1,18 +1,213 @@
 <ion-header>
-  <ion-navbar>
+
+  <ion-navbar no-border-bottom color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+
+
   </ion-navbar>
+  <expandable-header [scrollArea]="myContent" headerHeight="125">
+
+    <h2 *ngIf="current=='1'" (click)="current=='2'">{{dashboardata?.total_stock_value}}</h2>
+    <h2 *ngIf="current=='2'" (click)="current=='1'">{{dashboardata?.wallet_balance}}</h2>
+    <p *ngIf="current=='1'" (click)="current=='2'">Your stock value</p>
+    <p *ngIf="current=='2'" (click)="current=='1'">Your wallet balance</p>
+
+  </expandable-header>
+  <!-- <shrinking-segment-header [scrollArea]="myContent" headerHeight="150">
+    <img src="https://avatars.io/instagram/pathmoretravelled" />
+    <h2>Josh</h2>
+  </shrinking-segment-header> -->
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+<ion-content fullscreen #myContent>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-card>
+
+
+    <ion-card-content>
+      <ul class="flex-container">
+        <li class="flex-item" (click)="myStock()">
+          <ion-icon ios="ios-basket" md="md-basket" item-start></ion-icon>
+          <p>Stock</p>
+        </li>
+        <li class="flex-item" (click)="openWallet()">
+          <ion-icon ios="ios-briefcase-outline" md="md-briefcase" item-start></ion-icon>
+          <p>Wallet</p>
+        </li>
+        <li class="flex-item" (click)="openProducts()">
+          <ion-icon ios="ios-cart" md="md-cart" item-start></ion-icon>
+          <p>Products</p>
+        </li>
+        <li class="flex-item" (click)="openSettings()">
+          <ion-icon ios="ios-settings" md="md-settings" item-start></ion-icon>
+          <p>Settings</p>
+        </li>
+      </ul>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card class="feedback">
+
+    <ion-card-header>
+
+      <h2>Status</h2>
+    </ion-card-header>
+
+    <ion-card-content style="padding: 0px !important">
+      <ion-list no-lines>
+        <ion-item no-lines>
+          Wallet Balance
+          <span item-end>{{dashboardata?.wallet_balance | number:'.2-2'}}</span>
+        </ion-item>
+        <ion-item no-lines>
+          Total Stock Value
+          <span item-end>{{dashboardata?.total_stock_value | number:'.2-2'}}</span>
+        </ion-item>
+        <ion-item no-lines>
+          Total Sales Today
+          <span item-end>{{dashboardata?.total_sales_today | number:'.2-2'}}</span>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    
+  </ion-card>
+  <ion-card class="feedback">
+
+    <ion-card-header>
+
+      <h2>Account Snapshot</h2>
+    </ion-card-header>
+
+    <ion-card-content style="padding: 0px !important">
+      <ion-list no-lines>
+        <ion-item no-lines>
+          Total Orders
+          <span item-end>{{dashboardata?.total_investments | number:'.2-2'}}</span>
+        </ion-item>
+        <ion-item no-lines>
+          Total Returns
+          <span item-end>{{dashboardata?.total_returns | number:'.2-2'}}</span>
+        </ion-item> 
+      </ion-list>
+    </ion-card-content>
+    
+  </ion-card>
+  <ion-card class="feedback">
+
+    <ion-card-header>
+
+      <h2>Available Products</h2>
+    </ion-card-header>
+
+    <ion-card-content style="padding: 0px !important">
+      <ion-list *ngIf="dashboardata?.displayed_products?.count > 0">
+        <ion-item *ngFor="let product of dashboardata?.displayed_products?.data">
+          <ion-avatar item-start>
+            <img src="./assets/imgs/logo.png">
+          </ion-avatar>
+          <h6>{{product?.product_name}}</h6>
+          <p>{{product?.cost_price}}</p>
+          <p>Expires : {{product?.expiry_date}}</p>
+          <button ion-button item-end (click)="openProduct(product)">View</button>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngIf="dashboardata?.displayed_products?.count == 0">
+          <ion-item padding>
+            No available products
+          </ion-item>
+        </ion-list>
+    </ion-card-content>
+    <ion-row style="border-top: 1px solid #f8f8f8;">
+      <ion-col>
+      </ion-col>
+
+      <ion-col center text-center>
+        <button (click)="availableProducts()" ion-button icon-left clear small>
+
+          <div>MORE PRODUCTS</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card class="feedback" *ngIf="announcements?.has_announcements">
+
+    <ion-card-header>
+
+      <h2>Annoucements</h2>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        {{announcements?.latest_announcement.title}}
+      </p>
+    </ion-card-content>
+    <ion-row style="    border-top: 1px solid #f8f8f8;">
+      <ion-col>
+      </ion-col>
+
+      <ion-col center text-center>
+        <button (click)="openAnnouncements()" ion-button icon-left clear small>
+
+          <div>View More</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card class="feedback">
+
+    <ion-card-header>
+
+      <h2>About FundLot</h2>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        Own a business with your phone. Buy products and earn profits daily.
+      </p>
+    </ion-card-content>
+    <ion-row style="    border-top: 1px solid #f8f8f8;">
+      <ion-col>
+      </ion-col>
+
+      <ion-col center text-center>
+        <button (click)="aboutFundlot()" ion-button icon-left clear small>
+
+          <div>LEARN MORE</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card class="feedback">
+
+    <ion-card-header>
+      <div class="header-img">
+        <img src="https://avatars.io/instagram/pathmoretravelled" />
+      </div>
+      <h2>Help & Feedback</h2>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Need help or have a suggestion?</p>
+      <p>The FundLot support team is just a tap away.Take a look at our FAQ or send us a message</p>
+    </ion-card-content>
+    <ion-row style="    border-top: 1px solid #f8f8f8;">
+      <ion-col>
+        <button (click)="sendFeedback()" ion-button icon-left clear small>
+
+          <div>SEND FEEDBACK</div>
+        </button>
+      </ion-col>
+
+      <ion-col center text-center>
+        <button (click)="helpCenter()" ion-button icon-left clear small>
+
+          <div>VIEW FAQ</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
 </ion-content>
